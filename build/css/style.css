@@ -36,15 +36,49 @@ body {
 .centerit {
   margin: 0 auto; }
 
+.ovfh {
+  overflow: hidden; }
+
 .header {
   display: flex;
   position: fixed;
   height: 70px;
-  background-color: white;
+  background-color: #ffffff;
   align-items: center;
   width: 100%;
   z-index: 1000;
   top: 0; }
+  .header__mobile-burger {
+    display: none;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-left: 20px; }
+  .header__mobile-menu-list {
+    position: fixed;
+    top: 50px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    padding: 69px 24px;
+    display: none; }
+    .header__mobile-menu-list.menu-on {
+      display: block; }
+  .header__mobile-link {
+    color: #272727;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    line-height: 4rem; }
+    .header__mobile-link:hover {
+      color: #47c4f3; }
+    .header__mobile-link:active {
+      color: #47c4f3; }
+  .header__mobile-close {
+    position: absolute;
+    top: 41px;
+    right: 18px; }
   .header.active {
     box-shadow: 0 0 16px #00000040; }
   .header__logo {
@@ -231,17 +265,17 @@ body {
 
 .ourvet {
   padding: 95px 0 119px 0;
-  background-color: #f4f4f4; }
+  background-color: #ffffff; }
   .ourvet__card {
     width: 340px;
-    background-color: white;
+    background-color: #f8f8f8;
     border-radius: 10px;
     position: relative;
     padding: 0 26px;
     padding-bottom: 23px;
     margin-right: 25px;
     box-shadow: 0 0.125rem 0.563rem 0.063rem rgba(195, 195, 195, 0.1);
-    opacity: 0.6;
+    opacity: 0.8;
     transition: 333ms; }
     .ourvet__card:before {
       content: "";
@@ -337,7 +371,8 @@ body {
   opacity: 1; }
 
 .abon {
-  padding: 104px 0 96px 0; }
+  padding: 104px 0 96px 0;
+  background-color: #f4f4f4; }
   .abon .benefits__title {
     margin-bottom: 53px; }
   .abon__items-wrapper {
@@ -439,8 +474,7 @@ body {
   box-shadow: 0 0.125rem 0.25rem rgba(69, 69, 69, 0.1); }
 
 .use {
-  padding: 94px 0 0 0;
-  background-color: #f4f4f4; }
+  padding: 94px 0 0 0; }
   .use .benefits__title {
     margin-bottom: 92px; }
   .use__icon-wrapper {
@@ -468,7 +502,8 @@ body {
     line-height: 1.25rem; }
 
 .feedback {
-  padding: 92px 0 84px 0; }
+  padding: 92px 0 84px 0;
+  background-color: #f4f4f4; }
   .feedback .benefits__title {
     margin-bottom: 59px; }
   .feedback .bx-wrapper {
@@ -482,7 +517,7 @@ body {
   transition: 500ms !important;
   padding: 30px 15px 20px;
   position: relative;
-  background-color: #f4f4f4;
+  background-color: #ffffff;
   width: 350px;
   overflow: hidden;
   border-radius: 10px;
@@ -598,17 +633,16 @@ body {
   .howto .benefits__title {
     margin-bottom: 73px; }
   .howto__wrapimg {
-    width: 68px;
-    height: 70px;
+    width: 15%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 15px; }
+    justify-content: center; }
   .howto__icon {
     margin-bottom: 13px; }
   .howto__info {
-    padding-left: 34px; }
+    padding-left: 50px;
+    width: 85%;
+    padding-top: 40px; }
   .howto__title {
     color: #3c3c3c;
     font-family: Montserrat;
@@ -629,7 +663,10 @@ body {
     background-color: #ffffff;
     padding: 12px 27px 12px 32px;
     border-radius: 10px;
-    margin-bottom: 11px; }
+    margin-bottom: 11px;
+    width: 49%; }
+    .howto__list-item:nth-child(odd) {
+      margin-right: 11px; }
   .howto__list-img {
     margin-right: 57px;
     position: relative;
@@ -652,6 +689,8 @@ body {
     position: absolute;
     right: 0;
     bottom: 0; }
+  .howto__adaptive {
+    margin-bottom: 1.5rem; }
 
 .mb56 {
   margin-bottom: 56px; }
@@ -661,7 +700,7 @@ body {
 
 .button {
   padding-top: 30px;
-  padding-bottom: 120px; }
+  padding-bottom: 64px; }
   .button .subscribe {
     margin: 0 auto; }
 
@@ -702,3 +741,7 @@ body {
   font-size: 0.875rem;
   font-weight: 300;
   line-height: 2.593rem; }
+
+.consult {
+  padding: 115px 0 120px 0;
+  background-color: #f4f4f4; }

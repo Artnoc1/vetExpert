@@ -51,13 +51,14 @@
     display: block;
     margin-bottom: 10px; }
   .howto__adaptive {
-    margin-bottom: 1rem; }
+    margin-bottom: 1rem;
+    justify-content: center; }
   .howto__wrapimg {
     width: 100%; }
     .howto__wrapimg div {
       width: 100%; }
     .howto__wrapimg img {
-      margin: 0 auto;
+      margin: 10px auto;
       display: block; }
   .howto__info {
     padding-left: 0; }
@@ -80,12 +81,13 @@
   .button {
     padding-bottom: 465px; }
   .howto__dog {
-    bottom: -554px;
+    bottom: -524px;
     width: 295px;
-    right: 15px; }
+    right: 50%;
+    transform: translate(50%); }
   .col50 {
-    padding-right: 0;
-    padding-left: 0; }
+    padding-right: 15px;
+    padding-left: 15px; }
   .header__menu {
     display: none; }
   .headerbtn {
@@ -98,8 +100,8 @@
       width: 120px;
       height: 34px; }
   .benefits__subtitle {
-    font-size: 0.8rem;
-    line-height: 1.2rem;
+    font-size: 0.875rem;
+    line-height: 1.1rem;
     margin-bottom: 8px; }
   .slider-top__wrapper {
     height: 504px; }
@@ -139,4 +141,54 @@
     right: calc(50% - 106px);
     width: 212px; }
   .benefits .container {
-    padding-bottom: 100%; } }
+    padding-bottom: 120%; }
+  .howto__list-item {
+    width: 100%;
+    margin-right: 0 !important; }
+  .feedback {
+    padding: 40px 0; }
+  .header {
+    height: 50px; }
+  .headerbtn {
+    font-size: 8px;
+    width: 139px !important;
+    height: 36px !important; }
+  .header__mobile-burger {
+    display: flex; }
+  .header .container {
+    max-width: 100%; }
+  .consult {
+    padding: 40px 0; }
+  .ourvet {
+    padding: 40px 0; }
+  .benefits {
+    padding-top: 40px; }
+  .howto {
+    padding: 40px 0; }
+  .cat__monolog {
+    width: 201px;
+    height: 187px;
+    background-size: cover;
+    right: unset;
+    top: unset;
+    bottom: 180px;
+    left: 50%;
+    transform: translate(-50%); }
+  .cat__text {
+    top: 42px;
+    font-size: 1rem; }
+  .benefits__title {
+    margin-bottom: 40px; }
+  .button {
+    padding-top: 0; }
+  .padapt {
+    padding: 0; }
+  .col50 {
+    margin-bottom: 28px; } }
+
+@media (max-width: 375px) {
+  .header__logo {
+    width: 30%; }
+    .header__logo img {
+      max-width: 100%;
+      height: auto; } }
