@@ -169,7 +169,7 @@ body {
     display: block;
     width: 10px;
     height: 10px;
-    background-color: #ffffff60;
+    background-color: rgba(255, 255, 255, 0.6);
     text-indent: -9999px;
     border-radius: 10px;
     margin-right: 12px;
@@ -393,19 +393,19 @@ body {
       height: 12px;
       background-color: #ffdc00; }
     .abon__item_standart {
-      background-image: url(../img/abon-1.png); }
+      background-image: url(../img/abon-1.jpg); }
       .abon__item_standart:before {
         background-color: #ffdc00; }
       .abon__item_standart .abon__tablet {
         background-color: #fff5bd; }
     .abon__item_premium {
-      background-image: url(../img/abon-2.png); }
+      background-image: url(../img/abon-2.jpg); }
       .abon__item_premium:before {
         background-color: #5bf4c2; }
       .abon__item_premium .abon__tablet {
         background-color: #bdf3e1; }
     .abon__item_vip {
-      background-image: url(../img/abon-3.png); }
+      background-image: url(../img/abon-3.jpg); }
       .abon__item_vip:before {
         background-color: #fb9fcc; }
       .abon__item_vip .abon__tablet {
@@ -706,7 +706,7 @@ body {
 
 .footer {
   padding: 40px 0 40px 0;
-  background-image: url(../img/footer.png);
+  background-image: url(../img/footer.jpg);
   background-size: cover; }
   .footer__links {
     display: inline-block;

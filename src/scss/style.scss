@@ -191,7 +191,7 @@ body {
 		.bx-pager-link { 
 			display: block;
 			width: 10px; height: 10px;
-			background-color: #ffffff60;
+			background-color: rgba(255,255,255,0.6);
 			text-indent: -9999px;
 			border-radius: 10px;
 			margin-right: 12px;
@@ -441,7 +441,7 @@ body {
 			background-color: #ffdc00;
 		}
 		&_standart {
-			background-image: url(../img/abon-1.png);
+			background-image: url(../img/abon-1.jpg);
 			&:before {
 				background-color: #ffdc00;
 			}
@@ -450,7 +450,7 @@ body {
 			}
 		}
 		&_premium {
-			background-image: url(../img/abon-2.png);
+			background-image: url(../img/abon-2.jpg);
 			&:before {
 				background-color: #5bf4c2;
 			}
@@ -459,7 +459,7 @@ body {
 			}
 		}
 		&_vip {
-			background-image: url(../img/abon-3.png);
+			background-image: url(../img/abon-3.jpg);
 			&:before {
 				background-color: #fb9fcc;
 			}
@@ -810,7 +810,7 @@ body {
 }
 .footer {
 	padding: 40px 0 40px 0;
-	background-image: url(../img/footer.png);
+	background-image: url(../img/footer.jpg);
 	background-size: cover;
 	&__links {
 		display: inline-block;
