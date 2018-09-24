@@ -214,7 +214,7 @@
 		padding: 40px 0;
 	}
 	.ourvet {
-		padding: 40px 0;
+		padding: 60px 0;
 	}
 	.benefits {
 		padding-top: 40px;
@@ -247,6 +247,27 @@
 	}
 	.col50 {
 		margin-bottom: 28px;
+	}
+	.change-width {
+		width: 280px !important;
+	}
+	.slider-item {
+		opacity: 1;
+	}
+	.slider-ourvet .bx-controls-direction {
+		top: unset; 
+		bottom: -50px;
+		left: calc(50% - 50%);
+		width: 100%;
+	}
+	.slider-ourvet .bx-default-pager {
+		bottom: -45px;
+	}
+	.slider-ourvet {
+		margin: 0 auto;
+	}
+	.ourvet__description {
+		font-size: 11px;
 	}
 }
 @media (max-width: 375px) {

@@ -21,6 +21,9 @@
 .poss {
   position: static; }
 
+.jcc {
+  justify-content: center; }
+
 body {
   overflow-x: hidden; }
 
@@ -31,7 +34,7 @@ body {
   text-align: center; }
 
 .ourvet {
-  overflow-x: hidden; }
+  overflow: hidden; }
 
 .centerit {
   margin: 0 auto; }
@@ -232,7 +235,10 @@ body {
     line-height: 1.25rem; }
   .benefits__img-wrap {
     min-height: 85px;
-    margin-bottom: 17px; }
+    margin-bottom: 17px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end; }
 
 .col50 {
   width: 50%;
@@ -356,6 +362,8 @@ body {
     transform: translate(-50%); }
   .slider-ourvet .bx-pager-item {
     display: inline-block; }
+    .slider-ourvet .bx-pager-item:last-child .bx-pager-link {
+      margin-right: 0; }
   .slider-ourvet .bx-pager-link {
     display: block;
     width: 10px;
@@ -745,3 +753,84 @@ body {
 .consult {
   padding: 115px 0 120px 0;
   background-color: #f4f4f4; }
+
+.popup__overlay {
+  background-color: #00000080;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 99999;
+  visibility: hidden;
+  transition: 333ms;
+  opacity: 0; }
+  .popup__overlay.showup {
+    visibility: visible;
+    opacity: 1; }
+
+.popup__window {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 9px 1px rgba(195, 195, 195, 0.1);
+  height: 661px;
+  left: 50%;
+  position: absolute;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  padding: 39px 66px;
+  transition: 333ms;
+  opacity: 0; }
+  .popup__window::before {
+    content: " ";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 12px;
+    background-color: #ffdc00;
+    display: block;
+    position: absolute; }
+  .popup__window.showup {
+    top: 50%;
+    opacity: 1; }
+
+.popup__close {
+  display: block;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  opacity: 0.5;
+  background-image: url(../img/close-btn.png);
+  transition: 333ms; }
+  .popup__close:hover {
+    opacity: 1; }
+
+.popup__avatar {
+  margin-right: 30px;
+  border-radius: 15px; }
+
+.popup__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; }
+
+.popup__description {
+  width: 60%; }
+
+.popup__name {
+  color: #3d3d3d;
+  font-size: 20px;
+  font-weight: 800;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 16px; }
+
+.popup__about {
+  color: #646363;
+  font-family: Montserrat;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 22px; }
