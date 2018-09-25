@@ -331,9 +331,9 @@ body {
   padding-right: 15px;
   padding-left: 15px; }
 
-.slider-ourvet {
+.ourvet {
   position: relative; }
-  .slider-ourvet .bx-controls-direction {
+  .ourvet .bx-controls-direction {
     display: flex;
     justify-content: space-between;
     max-width: 1268px;
@@ -345,26 +345,26 @@ body {
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto; }
-  .slider-ourvet .bx-prev, .slider-ourvet .bx-next {
+  .ourvet .bx-prev, .ourvet .bx-next {
     display: block;
     width: 18px;
     height: 32px;
     text-indent: -9999px;
     background-repeat: no-repeat; }
-  .slider-ourvet .bx-prev {
+  .ourvet .bx-prev {
     background-image: url(../img/vet-left.png); }
-  .slider-ourvet .bx-next {
+  .ourvet .bx-next {
     background-image: url(../img/vet-right.png); }
-  .slider-ourvet .bx-default-pager {
+  .ourvet .bx-default-pager {
     position: absolute;
     bottom: -50px;
     left: 50%;
     transform: translate(-50%); }
-  .slider-ourvet .bx-pager-item {
+  .ourvet .bx-pager-item {
     display: inline-block; }
-    .slider-ourvet .bx-pager-item:last-child .bx-pager-link {
+    .ourvet .bx-pager-item:last-child .bx-pager-link {
       margin-right: 0; }
-  .slider-ourvet .bx-pager-link {
+  .ourvet .bx-pager-link {
     display: block;
     width: 10px;
     height: 10px;
@@ -372,7 +372,7 @@ body {
     text-indent: -9999px;
     border-radius: 10px;
     margin-right: 12px; }
-    .slider-ourvet .bx-pager-link.active {
+    .ourvet .bx-pager-link.active {
       background-color: #97ddfe; }
 
 .ourvet__card.change-color {

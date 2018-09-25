@@ -128,10 +128,10 @@
   .slider-top-wrap .bx-default-pager {
     position: absolute;
     bottom: 122px;
-    left: auto;
-    width: 100%;
+    left: 50%;
     display: flex;
-    justify-content: center; }
+    justify-content: center;
+    transform: translateX(-50%); }
   .benefits__description {
     font-size: 0.688rem;
     line-height: 1; }
@@ -146,7 +146,8 @@
     width: 100%;
     margin-right: 0 !important; }
   .feedback {
-    padding: 40px 0; }
+    padding: 40px 0;
+    padding-bottom: 100px; }
   .header {
     height: 50px; }
   .headerbtn {
@@ -160,7 +161,8 @@
   .consult {
     padding: 40px 0; }
   .ourvet {
-    padding: 60px 0; }
+    padding: 60px 0;
+    padding-bottom: 100px; }
   .benefits {
     padding-top: 40px; }
   .howto {
@@ -199,7 +201,36 @@
   .slider-ourvet {
     margin: 0 auto; }
   .ourvet__description {
-    font-size: 11px; } }
+    font-size: 11px; }
+  .feedback .bx-controls-direction {
+    top: unset;
+    bottom: 20px;
+    max-width: 100%;
+    left: 0; }
+  .ourvet .bx-default-pager {
+    bottom: 25px; }
+  .ourvet .bx-controls-direction {
+    top: unset;
+    bottom: 20px;
+    width: 100%;
+    max-width: 100%;
+    left: 0; }
+  .ourvet .bx-viewport {
+    overflow: visible !important; }
+  .feedback .bx-viewport {
+    overflow: visible !important; }
+  .ourvet__card {
+    height: 300px; }
+  .ourvet__photo {
+    width: 147px; }
+  .ourvet__name {
+    font-size: 15px;
+    margin-bottom: 18px;
+    line-height: 17.71px; }
+  .ourvet__description {
+    line-height: 1.3; }
+  .ourvet__popup {
+    font-size: 12px; } }
 
 @media (max-width: 375px) {
   .header__logo {

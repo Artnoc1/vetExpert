@@ -58,31 +58,20 @@ $(document).ready(function(){
 		$(".header__mobile-menu-list").toggleClass("menu-on");
 		$("body").toggleClass("ovfh");
 	})
-	if($(window).width() < 768){
-		sliderVet.reloadSlider({
-			slideWidth: 270,
-			minSlides: 1,
-			moveSlides: 1,
-			maxSlides: 1,
-			slideMargin: 30,
-			adaptiveHeight: false,
-			hideControlOnEnd: true,
-			shrinkItems: true,
-			wrapperClass: 'slider-ourvet',
-		});
-		sliderFeedback.reloadSlider({
-			slideWidth: 280,
-			minSlides: 1,
-			moveSlides: 1,
-			maxSlides: 1,
-			slideMargin: 30,
-			touchEnabled: false,
-			responsive: false,
-			adaptiveHeight: true,
-			hideControlOnEnd: true,
-			shrinkItems: true,
-		})
-	}
+	// if($(window).width() < 768){
+	// 	sliderVet.reloadSlider({
+	// 		maxSlides: 3,
+	// 		slideWidth: 280,
+	// 		adaptiveHeight: true,
+	// 		slideMargin: 0
+	// 	});
+	// 	sliderFeedback.reloadSlider({
+	// 		maxSlides: 3,
+	// 		slideWidth: 280,
+	// 		adaptiveHeight: true,
+	// 		slideMargin: 0
+	// 	})
+	// }
 	var persons = {
 		alex: {
 			img: 'img/alex.png',
