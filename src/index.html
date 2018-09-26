@@ -10,7 +10,9 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/adaptive.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+	<!-- <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script> -->
+	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 	<script async src="js/main.js"></script>
 
 	<title>ВетЭксперт</title>
@@ -63,7 +65,11 @@
 		</div>
 	</div>
 	<div class="st" id="slider">
+		<div class="slider-top-arrows">
+
+		</div>
 		<div class="slider-top">
+			
 			<div class="slider-top__wrapper" style="background-image: url(img/slider-1.jpg)">
 				<div class="container poss">
 					<div class="row poss">
@@ -321,6 +327,39 @@
 						</p>
 						<a href="javascript:void(0)" class="ourvet__popup" data-info="sergy">Подробнее...</a>
 					</div>
+					<div class="ourvet__card">
+						<img src="img/vet1.jpg" alt="" class="ourvet__photo">
+						<p class="ourvet__name">
+							Калиновский Алексей Анатольевич
+						</p>
+						<p class="ourvet__description">
+							Окончил Московскую Ветеринарную Академию им. К.И.Скрябина. Заведовал экспериментально-
+							биологической клиникой в ГНЦ колопроктологии МЗ РФ. Занимался...
+						</p>
+						<a href="javascript:void(0)" class="ourvet__popup" data-info="alex">Подробнее...</a>
+					</div>
+					<div class="ourvet__card">
+						<img src="img/vet2.jpg" alt="" class="ourvet__photo">
+						<p class="ourvet__name">
+							Лавренова Наталья Александровна
+						</p>
+						<p class="ourvet__description">
+							Около 30 лет практикует в ведущих ветклиниках Москвы. Специалист 
+							в области лечения и подготовки служебных собак. Внештатный сотрудник в отряде Спасательной...
+						</p>
+						<a href="javascript:void(0)" class="ourvet__popup" data-info="nataly">Подробнее...</a>
+					</div>
+					<div class="ourvet__card">
+						<img src="img/vet3.jpg" alt="" class="ourvet__photo">
+						<p class="ourvet__name">
+							Орехов Сергей Андреевич
+						</p>
+						<p class="ourvet__description">
+							Выпускник Брянской государственной сельскохозяйственной академии. <br> <br>
+							Несколько лет работал практикующим ветеринарным врачом в частных и... 
+						</p>
+						<a href="javascript:void(0)" class="ourvet__popup" data-info="sergy">Подробнее...</a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -372,7 +411,7 @@
 									владельца и перевозке животных
 								</p>
 							</div>
-							<a href="" class="subscribe bxshadow centerit">
+							<a href="javascript:void(0)" class="subscribe bxshadow centerit modal-pay" data-price="standart">
 								оформить абонемент
 							</a>
 						</div>
@@ -417,7 +456,7 @@
 									владельца и перевозке животных
 								</p>
 							</div>
-							<a href="" class="subscribe bxshadow centerit">
+							<a href="javascript:void(0)" class="subscribe bxshadow centerit modal-pay" data-price="premium">
 								оформить абонемент
 							</a>
 						</div>
@@ -462,7 +501,7 @@
 									владельца и перевозке животных
 								</p>
 							</div>
-							<a href="" class="subscribe bxshadow centerit">
+							<a href="javascript:void(0)" class="subscribe bxshadow centerit modal-pay" data-price="vip">
 								оформить абонемент
 							</a>
 						</div>
@@ -825,6 +864,60 @@
 					<p class="popup__about">
 					</p>
 				</div>
+			</div>
+		</div>
+	</div>
+	<div class="pay-popup-overlay">
+		<div class="pay-popup">
+			<div class="pay-popup-close">
+			</div>
+			<div class="pay-popup-form">
+				<p class="pay-popup-chosen">
+					Вы выбрали тариф: <span class="pay-tarrif"></span>
+				</p>
+				<p class="pay-price">
+					<span class="acc"></span> <span class="pay-dolla">$</span>
+				</p>
+				<form action="javascript:void(0)">
+					<input type="hidden" value="" id="abon-id">
+					<label for="pay-name" class="pay-label">ФИО</label>
+					<div class="pay-popup-required">
+						<input type="text" id="pay-name" class="pay-input">
+					</div>
+					<label for="pay-phone" class="pay-label">Телефон</label>
+					<div class="pay-popup-required">
+						<input type="text" id="pay-phone" class="pay-input">
+					</div>
+					<label for="pay-mail" class="pay-label">E-mail</label>
+					<div class="pay-popup-required">
+						<input type="text" id="pay-mail" class="pay-input">
+					</div>
+					<label for="pay-birthday" class="pay-label">Дата рождения</label>
+					<input type="text" id="pay-birthday" class="pay-input">
+					<label for="pay-alias" class="pay-label">Кличка питомца</label>
+					<input type="text" id="pay-alias" class="pay-input">
+					<label class="pay-label">Вид животного</label>
+					<select class="pay-alias-select" name="ve_pet_type_id" required="">
+						<option value="25">Собака</option>
+						<option value="26">Кошка</option>
+						<option value="28">Хорёк</option>
+						<option value="29">Кролик</option>
+						<option value="30">Шиншилла</option>
+						<option value="31">Морская свинка</option>
+						<option value="32">Крыса</option>
+						<option value="33">Хомяк</option>
+						<option value="34">Мышь</option>
+						<option value="35">Мини-пиги</option>
+						<option value="36">Птицы</option>
+						<option value="37">Черепаха</option>
+						<option value="38">Змея</option>
+						<option value="39">Ящерица</option>
+						<option value="40">Акв. рыбки</option>
+						<option value="41">Экзот. вид</option>
+						<option value="42">Ёж</option>
+					</select>
+					<input type="submit" value="оплатить" class="pay-submit">
+				</form>
 			</div>
 		</div>
 	</div>

@@ -1,78 +1,55 @@
 $(document).ready(function(){
-	$('.slider-top').bxSlider({
-		wrapperClass: 'slider-top-wrap',
-		touchEnabled: false,
-		auto: true,
-		pause: 7000
+	$('.slider-top').slick({
+		autoplay: true,
+		autoplaySpeed: 7000,
+		arrows: true,
+		dots: true,
+		prevArrow: '<a class="slick-prev"></button>',
+		nextArrow: '<a class="slick-next"></button>',
+		appendArrows: '.slider-top-arrows'
 	});
-	var sliderVet = $('.slider-vet').bxSlider({
-		slideWidth: 340,
-		minSlides: 1,
-		moveSlides: 1,
-		maxSlides: 3,
-		slideMargin: 30,
+	var sliderVet = $('.slider-vet').slick({
+		slidesToShow: 3,
+		slidesToScroll: 3,
+		arrows: true,
+		dots: true,
 		adaptiveHeight: true,
-		hideControlOnEnd: true,
-		shrinkItems: true,
-		wrapperClass: 'slider-ourvet',
-		onSliderLoad: function () {
-			$('.slider-vet>div:not(.bx-clone)').eq(1).addClass('change-color');
-		},
-		onSlideBefore: function ($slideElement, oldIndex, newIndex) {
-			$('.ourvet__card').removeClass('change-color');
-			$($slideElement).next().addClass('change-color');        
+		prevArrow: '<a class="slick-prev"></button>',
+		nextArrow: '<a class="slick-next"></button>',
+		responsive: [
+		{
+			breakpoint: 768,
+			settings: {
+				centerMode: true,
+				slidesToShow: 1
+			}
 		}
+		]
 	});
-	var sliderFeedback = $('.slider-feedback').bxSlider({
-		slideWidth: 350,
-		minSlides: 1,
-		moveSlides: 1,
-		maxSlides: 3,
-		slideMargin: 30,
-		touchEnabled: false,
-		responsive: false,
+	var sliderFeedback = $('.slider-feedback').slick({
+		slidesToShow: 3,
+		variableWidth: true,
+		dots: true,
 		adaptiveHeight: true,
-		hideControlOnEnd: true,
-		shrinkItems: true,
-		onSliderLoad: function () {
-			$('.slider-feedback>div:not(.bx-clone)').eq(1).addClass('change-width');
-		},
-		onSlideBefore: function ($slideElement, oldIndex, newIndex) {
-			$('.slider-item').removeClass('change-width');
-			$($slideElement).next().addClass('change-width');        
-		}
-	})
-	$(".header__link, .scrolltosub, .footer__links, .header__link-logo, .header__mobile-link").click(function() {
-		var scrollElem = $(this).attr('data-elem');
-		if ($(window).width > 768){
-			$([document.documentElement, document.body]).animate({
-				scrollTop: $("#" + scrollElem).offset().top
-			}, 555);
-		} else {
-			$([document.documentElement, document.body]).animate({
-				scrollTop: $("#" + scrollElem).offset().top - 25
-			}, 555);
-		}
+		prevArrow: '<a class="slick-prev"></button>',
+		nextArrow: '<a class="slick-next"></button>',
 	});
-	$(".header__mobile-burger, .header__mobile-close, .header__mobile-link").click(function(){
-		$(".header__mobile-menu-list").toggleClass("menu-on");
-		$("body").toggleClass("ovfh");
-	})
-	// if($(window).width() < 768){
-	// 	sliderVet.reloadSlider({
-	// 		maxSlides: 3,
-	// 		slideWidth: 280,
-	// 		adaptiveHeight: true,
-	// 		slideMargin: 0
-	// 	});
-	// 	sliderFeedback.reloadSlider({
-	// 		maxSlides: 3,
-	// 		slideWidth: 280,
-	// 		adaptiveHeight: true,
-	// 		slideMargin: 0
-	// 	})
-	// }
-	var persons = {
+});
+
+$(window).scroll(function() {
+	if ($(this).scrollTop() > 0) {
+		$(".header").addClass("active");
+	} else { 
+		$(".header").removeClass("active");
+	}
+});
+
+$(".popup__close, .ourvet__popup").click(function(){
+	$(".popup__overlay, .popup__window").toggleClass("showup");
+		// $("body").toggleClass("ovfh");
+	});
+
+var persons = {
 		alex: {
 			img: 'img/alex.png',
 			name: "Калиновский Алексей Анатольевич",
@@ -89,22 +66,40 @@ $(document).ready(function(){
 			desc: "Выпускник Брянской государственной сельскохозяйственной академии. <br><br>Несколько лет работал практикующим ветеринарным врачом в частных и государственных клиниках. <br><br>Сейчас сотрудник территориального отдела Россельхознадзора, занимается вопросами правового контроля перемещения животных внутри страны и по всему миру."
 		}
 	}
-	$(".popup__close, .ourvet__popup").click(function(){
-		$(".popup__overlay, .popup__window").toggleClass("showup");
-		// $("body").toggleClass("ovfh");
-	});
-	$(".ourvet__popup").click(function(){
-		var target = $(this).attr("data-info");
-		$(".popup__name").html(persons[target].name);
-		$(".popup__about").html(persons[target].desc);
-		$(".popup__avatar").attr("src",persons[target].img);
-	})
+
+$(".ourvet__popup").click(function(){
+	var target = $(this).attr("data-info");
+	$(".popup__name").html(persons[target].name);
+	$(".popup__about").html(persons[target].desc);
+	$(".popup__avatar").attr("src",persons[target].img);
+})
+var priceList = {
+		standart: {
+			name: 'Стандарт',
+			price: '59',
+			class: 'standart'
+		},
+		premium: {
+			name: 'Премиум',
+			price: '89',
+			class: 'premium'
+		},
+		vip: {
+			name: 'VIP',
+			price: '119',
+			class: 'vip'
+		}
+	}
+$(".pay-popup-close, .modal-pay").click(function(){
+	$(".pay-popup-overlay, .pay-popup").toggleClass("showup");
 });
 
-$(window).scroll(function() {
-	if ($(this).scrollTop() > 0) {
-		$(".header").addClass("active");
-	} else { 
-		$(".header").removeClass("active");
-	}
-});
+$(".modal-pay").click(function(){
+	var price = $(this).attr("data-price");
+
+	$("#abon-id").attr('value', priceList[price].price);
+	$(".pay-tarrif").html(priceList[price].name);
+	$(".acc").html(priceList[price].price);
+	$(".pay-popup").attr("class","pay-popup showup")
+	$(".pay-popup").addClass(priceList[price].class);
+})
