@@ -24,6 +24,12 @@
 .jcc {
 	justify-content: center;
 }
+.slider-top__text {
+	z-index: 100;
+}
+.slider-top__wrapper {
+	position: relative;
+}
 body {
 	// padding-top: 70px;
 	overflow-x: hidden;
@@ -700,6 +706,7 @@ body {
 	opacity: 0.6;
 	margin: 0 12px;
 	outline: none;
+	max-height: 410px;
 	&:before {
 		content: "";
 		position: absolute;
@@ -718,7 +725,11 @@ body {
 	flex-wrap: wrap;
 	// justify-content: space-between;
 	margin-bottom: 18px;
-
+	.slider__img {
+		img {
+			border-radius: 12px;
+		}
+	}
 }
 .slider__description {
 	width: 65%;
@@ -1101,6 +1112,7 @@ body {
 		background-color: #00000080;
 		transition: 333ms;
 		opacity: 0;
+		z-index: 99999;
 		&.showup {
 			// display: block;
 			visibility: visible;
@@ -1130,7 +1142,7 @@ body {
 	left: 50%;
 	transform: translate(-50%,-50%);
 	width: 540px;
-	height: 670px;
+	height: 720px;
 	background-color: white;
 	border-radius: 10px;
 	overflow: hidden;
@@ -1248,7 +1260,7 @@ body {
 		font-weight: 600;
 		line-height: 16px;
 		text-transform: uppercase;
-		margin: 0 auto;
+		margin: 12px auto;
 		outline: none;
 		cursor: pointer;
 		&:hover {
@@ -1259,3 +1271,28 @@ body {
 		}
 	}
 }
+.oferta {
+	font-size: 10px;
+	font-family: Montserrat;
+	margin-bottom: 10px;
+	text-align: center;
+	line-height: 1.5;
+	input {
+		display: none;
+	}
+	a {
+		text-decoration: none;
+		color: #66b0ed;
+	}
+	&__checkbox {
+		display: inline-block;
+		width: 12px;
+		height: 12px;
+		margin-right: 12px;
+		background-color: #ccc;
+	}
+	
+}
+.checkbox-dn:checked + .oferta__checkbox {
+		background-color: #ffd700;
+	}

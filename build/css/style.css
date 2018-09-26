@@ -24,6 +24,12 @@
 .jcc {
   justify-content: center; }
 
+.slider-top__text {
+  z-index: 100; }
+
+.slider-top__wrapper {
+  position: relative; }
+
 body {
   overflow-x: hidden; }
 
@@ -606,7 +612,8 @@ body {
   min-height: 400px;
   opacity: 0.6;
   margin: 0 12px;
-  outline: none; }
+  outline: none;
+  max-height: 410px; }
   .slider-item:before {
     content: "";
     position: absolute;
@@ -624,6 +631,8 @@ body {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 18px; }
+  .slider-top-wrapper .slider__img img {
+    border-radius: 12px; }
 
 .slider__description {
   width: 65%;
@@ -964,7 +973,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 540px;
-  height: 670px;
+  height: 720px;
   background-color: white;
   border-radius: 10px;
   overflow: hidden;
@@ -982,7 +991,8 @@ body {
     transition: 333ms;
     background-color: #00000080;
     transition: 333ms;
-    opacity: 0; }
+    opacity: 0;
+    z-index: 99999; }
     .pay-popup-overlay.showup {
       visibility: visible;
       opacity: 1; }
@@ -1090,10 +1100,31 @@ body {
     font-weight: 600;
     line-height: 16px;
     text-transform: uppercase;
-    margin: 0 auto;
+    margin: 12px auto;
     outline: none;
     cursor: pointer; }
     .pay-popup .pay-submit:hover {
       background-color: #ffe34a; }
     .pay-popup .pay-submit:active {
       background-color: #e0bf0c; }
+
+.oferta {
+  font-size: 10px;
+  font-family: Montserrat;
+  margin-bottom: 10px;
+  text-align: center;
+  line-height: 1.5; }
+  .oferta input {
+    display: none; }
+  .oferta a {
+    text-decoration: none;
+    color: #66b0ed; }
+  .oferta__checkbox {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 12px;
+    background-color: #ccc; }
+
+.checkbox-dn:checked + .oferta__checkbox {
+  background-color: #ffd700; }

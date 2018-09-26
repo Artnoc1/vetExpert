@@ -29,10 +29,21 @@ $(document).ready(function(){
 	var sliderFeedback = $('.slider-feedback').slick({
 		slidesToShow: 3,
 		variableWidth: true,
+		arrows: true,
 		dots: true,
 		adaptiveHeight: true,
 		prevArrow: '<a class="slick-prev"></button>',
 		nextArrow: '<a class="slick-next"></button>',
+		appendArrows: '.slider-feedback-arrows',
+		responsive: [
+		{
+			breakpoint: 768,
+			settings: {
+				centerMode: true,
+				slidesToShow: 1
+			}
+		}
+		]
 	});
 });
 
@@ -42,6 +53,13 @@ $(window).scroll(function() {
 	} else { 
 		$(".header").removeClass("active");
 	}
+});
+
+$(".footer__links, .header__mobile-link, .header__link, .headerbtn, .scrolltosub, .header__link-logo").click(function() {
+	var scrollElem = $(this).attr('data-elem')
+    $([document.documentElement, document.body]).animate({
+        scrollTop: $("#" + scrollElem).offset().top
+    }, 666);
 });
 
 $(".popup__close, .ourvet__popup").click(function(){

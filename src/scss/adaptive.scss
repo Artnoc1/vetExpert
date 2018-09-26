@@ -4,6 +4,10 @@
 	}
 }
 @media (max-width: 768px){
+	.slider-top-arrows {
+		width: 100%;
+		left: 0;
+	}
 	.footer__logo-wrapper {
 		width: 100%;
 		margin-bottom: 27px;
@@ -139,7 +143,7 @@
 		margin-bottom: 8px;
 	}
 	.slider-top__wrapper {
-		height: 504px;
+		height: 504px !important;
 	}
 	.container-slider {
 		width: 100%;
@@ -154,6 +158,14 @@
 		top: auto;
 		left: 0;
 		bottom: 115px;
+	}
+	.slider-top-arrows {
+		top: 72%;
+		padding: 0 15px;
+	}
+	.slider-top .slick-dots {
+		bottom: 112px;
+		left: calc(50% - 44px);
 	}
 	.subscribe {
 		font-size: 0.625rem;
@@ -294,10 +306,17 @@
 		overflow: visible !important;
 	}
 	.ourvet__card {
-		height: 300px;
+		height: 300px !important;
+		min-height: 300px !important;
 	}
 	.ourvet__photo {
 		width: 147px;
+	}
+	.slider-vet .slick-list {
+		height: 340px!important;
+	}
+	.slider-feedback .slick-list {
+		height: 430px !important;
 	}
 	.ourvet__name {
 		font-size: 15px;
@@ -309,6 +328,9 @@
 	}
 	.ourvet__popup {
 		font-size: 12px;
+	}
+	.slider-feedback .slick-dots {
+		bottom: -65px;
 	}
 }
 @media (max-width: 375px) {
