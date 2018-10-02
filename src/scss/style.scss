@@ -48,6 +48,7 @@ body {
 }
 .ovfh {
 	overflow: hidden;
+	position: relative;
 }
 .header {
 	display: flex;
@@ -420,6 +421,7 @@ body {
 	}
 }
 .slider-vet {
+	// padding: 0 15px;
 	position: relative;
 	width: 100%;
 	// padding-right: 15px; padding-left: 15px;
@@ -553,6 +555,13 @@ body {
 			.abon__tablet {
 				background-color: #fff5bd;
 			}
+			.mobile_slider-shwmore {
+				color: #ffdc00;
+				border-color: #ffdc00;
+				&:before {
+					background-image: url(../img/standart.svg)
+				}
+			}
 		}
 		&_premium {
 			background-image: url(../img/abon-2.jpg);
@@ -562,6 +571,13 @@ body {
 			.abon__tablet {
 				background-color: #bdf3e1;
 			}
+			.mobile_slider-shwmore {
+				color: #5bf4c2;
+				border-color: #5bf4c2;
+				&:before {
+					background-image: url(../img/premium.svg)
+				}
+			}
 		}
 		&_vip {
 			background-image: url(../img/abon-3.jpg);
@@ -570,6 +586,13 @@ body {
 			}
 			.abon__tablet {
 				background-color: #ffe6f2;
+			}
+			.mobile_slider-shwmore {
+				color: #fb9fcc;
+				border-color: #fb9fcc;
+				&:before {
+					background-image: url(../img/vip.svg)
+				}
 			}
 		}
 	}
@@ -622,9 +645,6 @@ body {
 		font-weight: 500;
 		line-height: 1rem;
 		margin-bottom: 21px;
-		&:last-child {
-			margin-bottom: 45px;
-		}
 	}
 	&__shield-img {
 		display: block;
@@ -689,6 +709,26 @@ body {
 	.bx-wrapper {
 		max-width: 100% !important;
 	}
+	.slider-feedback-arrows {
+		width: 50%;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		position: relative;
+		bottom: -10px;
+		.slick-prev, .slick-next {
+			display: block;
+			width: 18px;
+			height: 32px;
+			cursor: pointer;
+		}
+		.slick-prev {
+			background-image: url(../img/vet-left.png)
+		}
+		.slick-next {
+			background-image: url(../img/vet-right.png)
+		}
+	}
 }
 .container-slider {
 	width: 1300px;
@@ -706,7 +746,7 @@ body {
 	opacity: 0.6;
 	margin: 0 12px;
 	outline: none;
-	max-height: 410px;
+	max-height: 400px;
 	&:before {
 		content: "";
 		position: absolute;
@@ -751,22 +791,23 @@ body {
 	background-color: #ffffff;
 	border-radius: 0.375rem;
 	position: relative;
-	min-height: 249px;
-	max-height: 249px;
+	min-height: 239px;
+	max-height: 239px;
 }
 .slider__text {
 	color: #646363;
 	font-family: Montserrat;
 	font-size: 0.875rem;
 	font-weight: 400;
-	max-height: 176px;
+	max-height: 148px;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	line-height: 1.375rem;
 }
 .slider__stars {
 	position: absolute;
-	bottom: 12px;
+	bottom: 31px;
+	left: 38px;
 }
 .change-width {
 	opacity: 1;
@@ -1053,27 +1094,9 @@ body {
 	}
 }
 .slider-feedback {
-	.slick-prev,
-	.slick-next {
-		position: absolute;
-		bottom: -40px;
-		display: block;
-		width: 18px; height: 32px;
-		text-indent: -9999px;
-		background-repeat: no-repeat;
-		cursor: pointer;
-	}
-	.slick-prev {
-		background-image: url(../img/vet-left.png);
-		left: 331px;
-	}
-	.slick-next {
-		background-image: url(../img/vet-right.png);
-		right: 331px;
-	}
 	.slick-dots {
 		position: absolute;
-		bottom: -35px;
+		bottom: -45px;
 		left: 50%; 
 		transform: translate(-50%);
 	}
@@ -1136,6 +1159,7 @@ body {
 		&:before {
 			background-color: #fb9fcc;
 		}
+
 	}
 	position: absolute;
 	top: 30%;
@@ -1294,5 +1318,82 @@ body {
 	
 }
 .checkbox-dn:checked + .oferta__checkbox {
-		background-color: #ffd700;
+	background-color: #ffd700;
+}
+.mobile_slider {
+	margin-bottom: 25px;
+	max-height: auto;
+	overflow: hidden;
+	position: relative;
+	transition: 333ms;
+	&-shwmore {
+		display: none;
+		color: white;
+		font-weight: 900;
+		text-decoration: none;
+		font-size: 14px;
+		font-family: Montserrat;
+		// position: absolute;
+		// bottom: 74px;
+		margin-left: 30px;
+		border-bottom: 2px solid white;
+		position: relative;
+		margin-bottom: 10px;
+		&:before {
+			content: "";
+			position: absolute;
+			left: -30px;
+			display: block;
+			width: 22px;
+			height: 16px;
+			margin-right: 10px;
+			background-image: url(../img/infinity.svg);
+			background-size: cover;
+			border-color: none;
+		}
 	}
+	&.opened {
+		max-height: 1000px !important;
+	}
+}
+.slider-abons {
+	width: 350px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+.abon {
+	.slick-track {
+		padding: 0 15px;
+	}
+}
+.modal-pay {
+	margin-top: 15px;
+}
+.arrows-abon {
+	display: flex;
+	justify-content: space-between;
+	width: 75%;
+	margin: 0 auto;
+	position: relative;
+	top: -30px;
+	.slick-prev, .slick-next {
+		display: block;
+		width: 18px;
+		height: 32px;
+		background-size: cover;
+	}
+	.slick-prev {
+		background-image: url(../img/btn-left.png);
+		filter: invert(100%);
+		&.slick-disabled {
+			visibility: hidden !important;
+		}
+	}
+	.slick-next {
+		background-image: url(../img/btn-right.png);
+		filter: invert(100%);
+		&.slick-disabled {
+			visibility: hidden !important;
+		}
+	}
+}

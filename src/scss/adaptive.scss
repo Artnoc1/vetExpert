@@ -267,7 +267,10 @@
 	}
 	.slider-item {
 		opacity: 1;
+		max-height: 340px !important;
+		min-height: 340px !important;
 	}
+
 	.slider-ourvet .bx-controls-direction {
 		top: unset; 
 		bottom: -50px;
@@ -306,17 +309,25 @@
 		overflow: visible !important;
 	}
 	.ourvet__card {
-		height: 300px !important;
+		height: 330px !important;
 		min-height: 300px !important;
+		margin-right: 10px;
 	}
 	.ourvet__photo {
 		width: 147px;
 	}
 	.slider-vet .slick-list {
-		height: 340px!important;
+		height: 360px!important;
 	}
 	.slider-feedback .slick-list {
-		height: 430px !important;
+		height: 360px !important;
+	}
+	.slider-feedback .slick-dots li {
+		margin-right: 6px;
+	}
+	.slider__stars {
+		bottom: 14px;
+		left: 25px;
 	}
 	.ourvet__name {
 		font-size: 15px;
@@ -332,6 +343,79 @@
 	.slider-feedback .slick-dots {
 		bottom: -65px;
 	}
+	.feedback .slider-feedback-arrows {
+		width: 75%;
+		bottom: -35px;
+	}
+	.slider-feedback {
+		.slick-current + .slick-slide {
+			width: 75vw !important;
+			opacity: 1;
+			box-shadow: none;
+		}
+		.slider-item {
+			width: 75vw !important;
+		}
+		.slider__text {
+			font-size: 12px;
+			line-height: 1.2;
+			max-height: 188px;
+		}
+	}
+	.slider__info {
+		padding: 0 10px;
+		max-height: 180px;
+		min-height: 180px;
+	}
+	.slider__img {
+		img {
+			width: 66px;
+		}
+	}
+	.slider__name-animal {
+		font-size: 11px;
+		line-height: 16px;
+		span {
+			font-size: 12px;
+			line-height: 12px;
+		}
+	}
+	.slider__description {
+		width: 63%;
+	}
+	.slider-top-wrapper {
+		margin-bottom: 12px;
+	}
+	.p0m {
+		padding: 0;
+	}
+	.slider-abons {
+		width: 75vw;
+	}
+	.mobile_slider-shwmore {
+		display: inline-block;
+	}
+	.mobile_slider {
+		max-height: 230px;
+	}
+	.pay-popup {
+		width: 100vw;
+		height: 150vw;
+		border-radius: 0;
+		overflow: scroll;
+		padding-left: 37px;
+		padding-right: 37px;
+		padding-bottom: 37px;
+	}
+	.pay-popup-chosen {
+		font-size: 14px;
+		.pay-tarrif {
+			font-size: 16px;
+		}
+	}
+	.ovfh {
+		position: fixed;
+	}
 }
 @media (max-width: 375px) {
 	.header__logo {
@@ -340,5 +424,13 @@
 			max-width: 100%;
 			height: auto;
 		}
+	}
+	.abon__item {
+		padding: 20px 25px;
+	}
+}
+@media (max-width: 320px){
+	.abon__item {
+		padding: 20px 15px;
 	}
 }
