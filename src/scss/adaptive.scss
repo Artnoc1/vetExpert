@@ -309,7 +309,7 @@
 		overflow: visible !important;
 	}
 	.ourvet__card {
-		height: 330px !important;
+		height: 355px !important;
 		min-height: 300px !important;
 		margin-right: 10px;
 	}
@@ -317,7 +317,7 @@
 		width: 147px;
 	}
 	.slider-vet .slick-list {
-		height: 360px!important;
+		height: 390px!important;
 	}
 	.slider-feedback .slick-list {
 		height: 360px !important;
@@ -416,6 +416,32 @@
 	.ovfh {
 		position: fixed;
 	}
+	.popup__window {
+		border-radius: 0;
+		left: 0; top: 0 !important;
+		transform: translate(0,0);
+		width: 100%;
+		max-width: 100%;
+		padding: 30px 30px;
+	}
+	.popup__wrapper {
+		justify-content: center;
+	}
+	.popup__avatar-wrapper {
+		width: 100%;
+	}
+	.popup__avatar {
+		width: 100px;
+		margin: 0 auto;
+		display: block;
+		margin-bottom: 15px;
+	}
+	.popup__description {
+		width: 90%;
+	}
+	.popup__window {
+		overflow-y: scroll;
+	}
 }
 @media (max-width: 375px) {
 	.header__logo {
@@ -428,9 +454,13 @@
 	.abon__item {
 		padding: 20px 25px;
 	}
+	.slider__description {
+		width: 58%;
+	}
 }
 @media (max-width: 320px){
 	.abon__item {
 		padding: 20px 15px;
 	}
+
 }

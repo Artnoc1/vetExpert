@@ -2,10 +2,12 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,600,800&subset=cyrillic");
 @font-face {
   font-family: GilroyExtraBold;
+  font-display: auto;
   src: url(../fonts/GilroyExtraBold.otf); }
 
 @font-face {
   font-family: GilroyLight;
+  font-display: auto;
   src: url(../fonts/GilroyLight.otf); }
 
 .dffw {
@@ -46,8 +48,7 @@ body {
   margin: 0 auto; }
 
 .ovfh {
-  overflow: hidden;
-  position: relative; }
+  overflow: hidden; }
 
 .header {
   display: flex;

@@ -2,10 +2,12 @@
 
 @font-face {
 	font-family: GilroyExtraBold;
+	font-display: auto;
 	src: url(../fonts/GilroyExtraBold.otf);
 }
 @font-face {
 	font-family: GilroyLight;
+	font-display: auto;
 	src: url(../fonts/GilroyLight.otf);
 }
 .dffw {
@@ -48,7 +50,7 @@ body {
 }
 .ovfh {
 	overflow: hidden;
-	position: relative;
+	
 }
 .header {
 	display: flex;
